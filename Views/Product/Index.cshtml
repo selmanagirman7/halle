@@ -1,0 +1,62 @@
+﻿@using Entity
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <main>
+
+      <!-- slider-area-start  -->
+      <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="https://mlefouu0vzdb.i.optimole.com/t95KKjs-9_VVC1zu/w:1200/h:600/q:mauto/rt:fill/g:ce/https://www.realgold.com.tr/wp-content/uploads/2019/08/IMG_0115.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="page__title-wrapper mt-100">                  
+           
+                     <h3 class="page__title mt-20">Ürünlerimiz</h3>      
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- slider-area-end -->
+
+      <!-- portfolio-area start -->
+      <section class="portfolio-area pt-110 pb-110">
+         <div class="container">
+
+             <div id="portfolio-grid" class="row grid">
+                 @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 grid-item cat2 cat4">
+                        <div class="portfolio-item ">
+                            <div class="py-3" style="margin-bottom: -153px; padding-right:80px; padding-left:80px;  height:600px; width:300px; " class="portfolio-wrapper">
+                                <div style=" width:300px;" class=" w-img">
+                           <img src="~/images/@item.ImgPath" alt="">
+                        </div>
+                        <div class="portfolio-caption">
+                           <p>@item.ProductName</p>
+                           <h6><a>@item.ThumbDesc</a></h6>
+                        </div>
+                        <div class="portfolio-caption-top">
+                           <p><a href="#">@item.ProductName</a></p>
+                           <h6><a href="/Product/ProductDetail/@item.ProductId">@item.ThumbDesc</a></h6>
+                        </div>
+
+                                <a href="/Product/ProductDetail/@item.ProductId"><button style=" width:291px; height:35px; position:center;" type="button" class="btn btn-danger">@item.BoxSize</button></a>
+                       
+                     </div>
+                  </div>
+               </div>
+                }
+               
+
+            </div>
+        
+         </div>
+     </section>
+     <!-- portfolio-area end -->
+
+     </main>
+

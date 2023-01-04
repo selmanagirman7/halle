@@ -1,0 +1,61 @@
+﻿@using Entity
+@model List<Product>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_EnLayout.cshtml";
+}
+
+<main>
+
+    <!-- slider-area-start  -->
+    <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="https://mlefouu0vzdb.i.optimole.com/t95KKjs-9_VVC1zu/w:1200/h:600/q:mauto/rt:fill/g:ce/https://www.realgold.com.tr/wp-content/uploads/2019/08/IMG_0115.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-12">
+                    <div class="page__title-wrapper mt-100">
+
+                        <h3 class="page__title mt-20">Products</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- slider-area-end -->
+    <!-- portfolio-area start -->
+    <section class="portfolio-area pt-110 pb-110">
+        <div class="container">
+
+            <div id="portfolio-grid" class="row grid">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6 grid-item cat2 cat4">
+                        <div class="portfolio-item mb-30">
+                            <div class="portfolio-wrapper">
+                                <div class="portfolio-image w-img">
+                                    <img src="~/images/@item.ImgPath" alt="">
+                                </div>
+                                <div class="portfolio-caption">
+                                    <p>@item.ProductNameEng</p>
+                                    <h6><a href="#">@item.ThumbDescEng</a></h6>
+                                </div>
+                                <div class="portfolio-caption-top">
+                                    <p><a href="#">@item.ProductNameEng</a></p>
+                                    <h6><a href="/Product/ProductDetail">@item.ThumbDescEng</a></h6>
+                                </div>
+                                <div class="portfolio-caption-bottom">
+                                    <a href="/Product/ProductDetail"><i class="fa-light fa-arrow-right-long"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- portfolio-area end -->
+
+</main>
+

@@ -1,0 +1,50 @@
+﻿@using Entity
+@model List<Product>
+
+
+ <main>
+
+      
+      <section class="portfolio-area pt-110 pb-110">
+         <div class="container">
+
+             <div id="portfolio-grid" class="row grid">
+               
+                 
+                 @foreach (var item in Model)
+                {
+                    
+
+                    <div class="col-lg-4 col-md-6 grid-item cat2 cat4">
+                        <div class="portfolio-item ">
+
+
+                            <div class="py-3" style="margin-bottom: -153px; padding-left:-183px;   height:700px; width:400px;  " class="portfolio-wrapper">
+                                <div class=" w-img">
+                                    <img style=" height:300px; width:300px;" src="~/images/@item.ImgPath" alt="">
+                                </div>
+                                <div class="portfolio-caption">
+                                    <p>@item.ProductName</p>
+                                    <h6><a href="#">@item.ThumbDesc</a></h6>
+                                </div>
+                                <div class="portfolio-caption-top">
+                                    <p><a>@item.ProductName</a></p>
+                                    <h6><a href="/Product/ProductDetail/@item.ProductId">@item.ThumbDesc</a></h6>
+                                </div>
+
+                                <a href="/Product/ProductDetail/@item.ProductId"><button style=" width:291px; height:35px; position:center;" type="button" class="btn btn-danger">@item.BoxSize</button></a>
+
+                            </div>
+                        </div>
+                    </div>
+                }
+               
+
+            </div>
+        
+         </div>
+     </section>
+    
+
+     </main>
+

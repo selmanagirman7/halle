@@ -1,0 +1,160 @@
+﻿@using Entity
+@model List<About>
+
+
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+ <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="https://www.dulgerogullari.com/images/hakkimizda.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="page__title-wrapper mt-100">                  
+                    
+                      @foreach (var item in Model)
+                     {
+                          <h3 class="page__title mt-20">@item.AboutTitle</h3>                  
+                     }
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- slider-area-end -->
+
+      <!-- about__area start -->
+      <section class="about__area-2 pt-150 pb-90">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="row">
+                     <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="about__sm-image about__sm-image-df">
+                           <div class="sm-image__item w-img mb-30">
+                              <a href="#"><img style="height:450px;" src="~/assets/img/888.jpeg" alt="ab-img"></a>
+                           </div>
+                           <div class="sm-image__item w-img mb-30">
+                                <a href="#"> <img style="height:450px;" src="http://www.hayalperestboncuk.com.tr/Uploads/UrunResimleri/buyuk/tesbih-ara-metal-aparat-02-c646.jpg"></a>
+                              <div class="sm-image__content">
+                                 <div class="sm-number">
+                                    <a href="#">17 <span>+</span></a>
+                                    <p>Deneyim</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-6 col-md-6">
+                        <div class="about__sm-image">
+                           <div class="sm-image__item w-img mb-30">
+                                <a href="#"><img style="height:450px;" src="https://www.dekorcenneti.com/galeri/mutfak%20dolabi%20kulplari%20nasil%20olmali(7).jpg"></a>
+                           </div>
+                           <div class="sm-image__item w-img mb-30">
+                                <a href="#"><img style ="height:450px;" src="https://www.hayalperestboncuk.com.tr/Uploads/UrunResimleri/thumb/metal-dudak-aparati-3086.jpg"></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6">
+                  <div class="ab-left-content">
+                      @foreach (var item in Model)
+                        {
+                     <div class="section__wrapper mb-30">
+                         <h4 class="section__title">@item.AboutTitle</h4>
+                            <div class="r-text">
+                           <span>hakkımızda</span>
+                        </div>
+                     </div>
+                     <p class="abd-text">@item.AboutDescription</p>
+                        <div class="ab-author mb-30">
+                        </div>
+                     
+                     
+                        }
+
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- about__area end -->
+
+      <!-- history__area start -->
+      @await Component.InvokeAsync("AboutReferanceComponent")
+
+      <!-- history__area end -->
+
+
+      <!-- company__about start -->
+      <section class="company__about">
+         <div class="row g-0">
+            <div class="col-xl-12">
+               <div class="company__about-tab">
+                  <ul class="nav nav-tabs about-tabs" id="myTab" role="tablist">
+                     <li class="nav-item abst-item abst-item" role="presentation">
+                        <button class="nav-link abst-item-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">VİZYONUMUZ <i class="fa-light fa-arrow-down-long"></i></button>
+                     </li>
+                     <li class="nav-item abst-item" role="presentation">
+                        <button class="nav-link active abst-item-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false"> DEĞERLERİMİZ  <i class="fa-light fa-arrow-down-long"></i></button>
+                     </li>
+                     <li class="nav-item abst-item" role="presentation">
+                        <button class="nav-link abst-item-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false"> MİSYONUMUZ <i class="fa-light fa-arrow-down-long"></i></button>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="tab-content company__about-tabs-content" id="myTabContent">
+                  <div class="tab-pane fade pt-90 pb-40" id="home" role="tabpanel" aria-labelledby="home-tab">
+                     <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                           <div class="company__sm-about text-center">
+                               @foreach (var item in Model)
+                              {
+                                  
+                              <p>   @item.Vission   </p>
+                              }
+                           </div>
+                        </div>
+                     </div>
+
+
+                  </div>
+                  <div class="tab-pane fade show active pt-90 pb-40" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                     <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                           <div class="company__sm-about text-center">
+                              @foreach (var item in Model)
+                             {
+                               <p>@item.Value</p>
+
+                             }
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tab-pane fade pt-90 pb-40" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                     <div class="row justify-content-center">
+                        <div class="col-xl-8">
+                           <div class="company__sm-about text-center">
+                                    
+                               @foreach (var item in Model)
+                              {
+                                  <p>@item.Mission</p>
+
+                              }
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+

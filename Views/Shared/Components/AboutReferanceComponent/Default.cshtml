@@ -1,0 +1,42 @@
+﻿@using Entity
+@model IEnumerable<Referance>
+
+
+<section class="history__area grey-bg-5 pt-120 pb-90 fix">
+         <div class="history__right-bg">
+            <img src="~/assets/img/testimonial/testimonial-bg-1.jpg" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="section__wrapper mb-55">
+                     <h4 class="section__title">Referanslarımız</h4>
+                     <div class="r-text">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-12">
+                  <div class="row">
+                    @foreach (var item in Model)
+                    {
+                         <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="history__item mb-30">
+                           <div class="sm-item-thumb w-img">
+                              <a href="#"><img src="~/images/@item.ImagePath" alt=""></a>
+                              <div class="sm-item-tag">
+                              </div>
+                           </div>
+                           <div class="sm-item-content">
+                                    <h6><a href="/OurService/Index">@item.ReferanceName</a></h6>
+                              <p>Dünya Standartlarında Üretim Kalitesi</p>
+                           </div>  
+                        </div>
+                     </div>
+                    }
+           
+            
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>

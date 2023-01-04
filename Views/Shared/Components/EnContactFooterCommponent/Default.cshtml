@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Entity.Contact>
+
+
+
+
+
+
+
+
+
+<div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+    <div class="footer__widget mb-40">
+        <h5 id="sem" class="footer__widget-title">Contact </h5>
+        <div class="footer__widget-content">
+            <div class="footer__links">
+
+                @foreach (var item in Model)
+                {
+                    <ul>
+                        <li><i id="man" class="fa-regular fa-phone"></i><a href="/OurService/Index">@item.CompanyPhone</a></li>
+                    </ul>
+                    <ul>
+                        <li><i id="sel" class="fa-regular fa-envelope"></i><a hresf="/OurService/Index">@item.ComponayMail</a></li>
+                    </ul>
+                     <ul>
+                        <li><i id="aa" class="fa-solid fa-location-arrow"></i><a hresf="/OurService/Index">@item.CompanyAdressEng</a></li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    #sel {
+        font-size: 22px;
+    }
+
+    #man {
+        font-size: 22px;
+    }
+
+    #aa{
+        font-size:22px;
+    }
+</style>

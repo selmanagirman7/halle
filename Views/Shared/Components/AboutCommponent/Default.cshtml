@@ -1,0 +1,50 @@
+﻿@using Entity
+@model List<About>
+ 
+
+<section class="about__area pt-120 pb-90">
+         <div class="container">
+            <div class="row align-items-center">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="ab-tab-info mb-30">
+                     <div class="ab-image w-img">
+                        <img style="height:600px; width:600px;" src="~/images/21.jpg" alt="">
+                     </div>
+                    <div class="absp-text absp-text-2">
+                        <span><i aria-hidden="true" class="fas fa-star"></i></span>
+                        <div class="absp-info">
+                            <h5><span class="counter">7000</span>+</h5>
+                            <span class="absm-title">Memnun Müşteri</span>
+                        </div>
+                    </div>
+                        <div class="absp-text absp-text-1">
+                       <span><i aria-hidden="true" class="fas fa-star"></i></span>
+                       <div class="absp-info">
+                    <h5><span class="counter">10000</span>+</h5>
+                          <span class="absm-title">Toplam İş Sayısı</span>
+                          </div>
+                              </div>
+                  </div>
+               </div>
+            @foreach (var item in Model)
+            {
+                <div class="col-xl-6 col-lg-6">
+                  <div class="ab-left-content">
+                     <div class="section__wrapper mb-30">
+                        <h4 class="section__title">@item.AboutTitle</h4>
+                        <div class="r-text">
+                           <span>Biz Kimiz? </span>
+                        </div>
+                     </div>
+                     <p class="abd-text">@item.AboutDescription</p>
+                         
+                     <div class="ab-button mb-30">
+                        <a href="/About/Index" class="tp-btn">daha fazla bilgi edin</a>
+                     </div>
+                  </div>
+               </div>
+            }
+            
+            </div>
+         </div>
+      </section>

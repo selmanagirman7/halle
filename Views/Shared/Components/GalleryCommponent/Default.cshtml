@@ -1,0 +1,50 @@
+﻿@using Entity
+@model List<Galery>
+
+<section class="project__area pt-120 pb-85 fix">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <div class="section__wrapper section__wrapper-2 mb-50">
+                    <span class="st-meta">Galeri</span>
+                    <h4 class="section__title">Kaplamalı ürünlerimiz </h4>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6">
+                <!-- If we need navigation buttons -->
+                <div class="project__slider-arrow-wrapper mb-30 text-sm-end">
+                    <div class="project__slider-arrow">
+                        <div class="project-button-prev ms-button-3 ms-button-3-border"><i class="far fa-long-arrow-left"></i> Geri</div>
+                        <div class="project-button-next ms-button-3">İleri <i class="far fa-long-arrow-right"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="project__slider project__slider-active swiper-container">
+                    <div class="project___slider-wrapper swiper-wrapper">
+  @foreach (var item in Model)
+                            {
+                            <div style=" height:600px; width:300px; " class="project__slider-item swiper-slide">
+                            
+                           
+
+                                    <img border="0" src="~/images/@item.ImagePath">
+
+
+
+
+                                <h5 class="project__slider-item-title"><a 
+                                    ="/OurService/Index">@item.PageTitle</a></h5>
+                        
+                        </div>}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

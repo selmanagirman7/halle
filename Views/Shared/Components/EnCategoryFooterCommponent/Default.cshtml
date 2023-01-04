@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Entity.Category>
+
+
+
+
+
+
+
+
+
+<div class="col-xl-2 col-lg-2 col-md-3 col-sm-4 col-6">
+    <div class="footer__widget mb-40">
+        <h5 class="footer__widget-title"> Services </h5>
+        <div class="footer__widget-content">
+            <div class="footer__links">
+
+                @foreach (var item in Model)
+                {
+                    <ul>
+
+                        <li> 
+                            <a href="/product/Index">@item.CategoryNameEng</a>
+                        </li>
+                    </ul>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>

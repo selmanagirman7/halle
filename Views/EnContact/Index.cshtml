@@ -1,0 +1,138 @@
+﻿@using Entity
+@model List<Contact>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_EnLayout.cshtml";
+}
+
+ <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="https://www.dulgerogullari.com/images/iletisim.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="page__title-wrapper mt-100">                  
+                
+                     <h3 class="page__title mt-20">CONTACT </h3>      
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- slider-area-end -->
+
+      <!-- contact__area start -->
+ @foreach (var item in Model)
+                        {
+      <section class="contact__area pt-120 pb-80" data-background="~/assets/img/bg/contact-bg.png">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-md-6">
+                  <div class="contact__item text-center mb-30">
+                     <div class="contact__icon mb-35">
+                        <i class="fal fa-envelope-open-text"></i>
+                     </div>
+
+                     <h5 class="contact__title mb-25">Email Address</h5>
+                     <div class="contact__text">
+                        <p><a href="/cdn-cgi/l/email-protection#254c4b434a6552404748444c490b464a48"><span class="__cf_email__" data-cfemail="2b42454d446b5c4e49464a424705484446"></span>@item.ComponayMail</a></p>
+                        <p><a href="/cdn-cgi/l/email-protection#63090c011023140601100a17060b0a0d17104d000c0e"><span class="__cf_email__" data-cfemail="4e24212c3d0e392b2c3d273a2b2627203a3d602d2123"></span></a></p>
+                     </div>
+                  </div>
+               </div>
+              
+               <div class="col-lg-3 col-md-6">
+                  <div class="contact__item text-center mb-30">
+                     <div class="contact__icon mb-35">
+                        <i class="fa-light fa-phone"></i>
+                     </div>
+                     <h5 class="contact__title mb-25">PHONE NUMBER</h5>
+                     <div class="contact__text">
+                        <p><a href="tel:@item.CompanyPhone">@item.CompanyPhone</a></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                  <div class="contact__item text-center mb-30">
+                     <div class="contact__icon mb-35">
+                        <i class="fa-light fa-map-location-dot"></i>
+                     </div>
+                     <h5 class="contact__title mb-25">Address</h5>
+                     <div class="contact__text">
+                        <p><a href="../../../maps/place/15 E Joseph St, Moonachie, NJ 07074, USA/40.8396913,-74.0466882,18.38z/data=!4m5!3m4!1s0x89c2f8338e23173b0xf4b461bddf07ed28!8m2!3d40.8398536!4d-74.0469722.html" target="blank"> <br> @item.CompanyAdressEng</a></p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-md-6">
+                  <div class="contact__item text-center mb-30">
+                     <div class="contact__icon mb-35">
+                        <i class="fa-light fa-bullseye-arrow"></i>
+                     </div>
+                     <h5 class="contact__title mb-25">Social Media Accounts</h5>
+                     <div class="contact__social mt-30">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-behance"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                     </div>
+                  </div>
+               </div>
+              
+            </div>
+         </div> 
+      </section>}
+      <!-- contact__area end -->
+
+      <!-- contact__area-2 start -->
+      <section class="contact__area-2">
+         <div class="container">
+            <div class="contact__form">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-6">
+                        <div class="section__wrapper mb-45">
+                           <h4 class="section__title">Contact Us</h4>
+                           <div class="r-text">
+                              <span>contact</span>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-12">
+                        <form id="contact-form" action="mail.php" method="POST">
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <div class="contact-filed mb-20">
+                                    <input type="text" name="name" placeholder="Name ">
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                 <div class="contact-filed contact-icon-mail mb-20">
+                                    <input email="text" name="email" placeholder="Email ">
+                                </div>
+                              </div>
+                           </div>
+                           <div class="contact-filed contact-icon-message mb-25">
+                              <textarea placeholder="Enter message " name=""></textarea>
+                          </div>
+                          <div class="contact__form-agree  d-flex align-items-center mb-20">
+                        
+                           </div>
+                           <div class="form-submit text-center">
+                               <button class="tp-btn" type="submit">Send</button>
+                           </div>
+                           <p class="ajax-response"></p>
+                       </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- contact__area-2 end -->
+
+      <!-- contact__map start -->
+      <section class="contact__map">
+         <div class="contact__map-wrap">
+<div style="width: 100%"><iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure acres/hectares on map</a></iframe></div>             <div class="contact__map-icon">
+             </div>
+         </div>
+      </section>
+

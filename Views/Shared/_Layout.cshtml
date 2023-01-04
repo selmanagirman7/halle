@@ -1,0 +1,98 @@
+﻿<!doctype html>
+<html   lang="zxx">
+   <head>
+     @await Html.PartialAsync("_HeaderPartial")
+   </head>
+   <body>
+ 
+      <!--[if lte IE 9]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+      <![endif]-->
+
+
+      <!-- Preloader -->
+@*      <div class="preloader"></div>
+*@      <!-- pre loader area end -->
+
+   
+      <!-- back to top end -->  
+      
+      <!-- header-area-start -->
+     @await Html.PartialAsync("_NavbarPartrial")
+     
+    
+
+
+    
+      <!-- header-area-end -->
+
+
+ 
+      <main>
+
+      <!-- slider-area-start  -->
+      @RenderBody()      
+      <!-- slider-area-end -->
+
+      <!-- Swiper Dot start -->
+      <!-- Swiper Dot end -->
+
+      <!-- about__area start -->
+     
+      <!-- about__area end -->
+
+      <!-- services-area start -->
+    
+      <!-- services-area end -->
+
+      <!-- sd-banner-area start -->
+      
+      <!-- sd-banner-area end -->
+
+      <!-- brand__area start -->
+      <!-- brand__area end -->
+
+      <!-- feature__area start -->
+@*     @await Component.InvokeAsync("FeaturesCommponent")
+*@
+     
+      <!-- feature__area end -->
+
+     </main>
+
+      <!-- footer start -->
+  
+     @await Html.PartialAsync("_FooterPartial")
+
+
+
+
+
+
+
+
+    
+      <!-- footer end -->
+
+      <!-- JS here -->
+      <script src="~/assets/js/vendor/jquery.js"></script>
+      <script src="~/assets/js/vendor/waypoints.js"></script>
+      <script src="~/assets/js/bootstrap-bundle.js"></script>
+      <script src="~/assets/js/meanmenu.js"></script>
+      <script src="~/assets/js/swiper-bundle.js"></script>
+      <script src="~/assets/js/owl-carousel.js"></script>
+      <script src="~/assets/js/magnific-popup.js"></script>
+      <script src="~/assets/js/parallax.js"></script>
+      <script src="~/assets/js/backtotop.js"></script>
+      <script src="~/assets/js/nice-select.js"></script>
+      <script src="~/assets/js/counterup.js"></script>
+      <script src="~/assets/js/wow.js"></script>
+      <script src="~/assets/js/isotope-pkgd.js"></script>
+      <script src="~/assets/js/imagesloaded-pkgd.js"></script>
+      <script src="~/assets/js/ajax-form.js"></script>
+      <script src="~/assets/js/main.js"></script>
+    <script src="~/assets/js/email-decode.min.js"></script>
+
+   </body>
+</html>
+

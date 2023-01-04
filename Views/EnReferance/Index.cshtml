@@ -1,0 +1,60 @@
+﻿
+@using Entity
+@model IEnumerable<Referance>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_EnLayout.cshtml";
+}
+
+<section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="https://mlefouu0vzdb.i.optimole.com/t95KKjs-9_VVC1zu/w:1200/h:600/q:mauto/rt:fill/g:ce/https://www.realgold.com.tr/wp-content/uploads/2019/08/IMG_0115.jpg">
+         <div class="container">
+            <div class="row">
+               <div class="col-xxl-12">
+                  <div class="page__title-wrapper mt-100">                  
+                    
+                   
+                          <h3 class="page__title mt-20">Referance</h3>                  
+                     
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+<section class="history__area grey-bg-5 pt-120 pb-90 fix">
+         <div class="history__right-bg">
+        <img src="~/images/nikel.jpg" alt="">
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6">
+                  <div class="section__wrapper mb-55">
+                     <h4 class="section__title">Referance</h4>
+                     <div class="r-text">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-12">
+                  <div class="row">
+                    @foreach (var item in Model)
+                    {
+                         <div class="col-xl-3 col-lg-6 col-md-6">
+                        <div class="history__item mb-30">
+                           <div class="sm-item-thumb w-img">
+                              <a href="#"><img src="~/images/@item.ImagePath" alt=""></a>
+                              <div class="sm-item-tag">
+                              </div>
+                           </div>
+                           <div class="sm-item-content">
+                              <h6><a href="services-details.html">@item.ReferanceNameEng</a></h6>
+                           </div>  
+                        </div>
+                     </div>
+                    }
+           
+            
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
